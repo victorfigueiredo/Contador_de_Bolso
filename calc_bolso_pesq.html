@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Bolso</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <img src="Figuras/notfound.png"> 
+        <button class="botaovoltar">Voltar</button>
+        <div class="quadrousuario"> 
+             <h2 class="nomeusuario">Nome do usuario</h2>
+             <button class="botaosair">Sair</button>
+        </div>     
+    </header>
+    <section class="sectionpesq">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div><br>
+        <div class="quadropesq">
+            <h2 class="titulo">Pesquisa</h2><br>
+            <div class="pesqbox">
+                <form>
+                    Gênero:
+                    <label for="feminino"><input type="radio" id="feminino" name="genero" value="femininio"> Fem. </label>
+                    <label for="masculino"><input type="radio" id="masculino" name="genero" value="masculino"> Masc. </label>
+                    <label for="grupo"><input type="radio" id="grupo" name="genero" value="grupo"> Grupo </label>
+                    <br><br>
+                    Qantidade de pessoas:
+                    <label for="1"><input type="radio" id="1" name="quantidade" value="1"> 1 </label>
+                    <label for="2"><input type="radio" id="2" name="qantidade" value="2"> 2 </label>
+                    <label for="3-4"><input type="radio" id="3-4" name="quantidade" value="3-4"> 3-4 </label>
+                    <label for="5+"><input type="radio" id="5+" name="quantidade" value="5+"> 5+ </label>
+                    <br><br>
+                    Fixa etaria:
+                    <label for="crianca"><input type="radio" id="crianca" name="idade" value="crianca"> Criança </label>
+                    <label for="adulto"><input type="radio" id="adulto" name="idade" value="adulto"> Adulto </label>
+                    <label for="idoso"><input type="radio" id="idoso" name="idade" value="idoso"> Idoso </label>
+                    <br><br>
+                    <p class="horario">Data e horario: dd/mm/aaaa xx:xx</p>
+                </form>
+            </div>        
+        </div><br>
+        <div class="quadrototal">
+            <h2 class="titulo">Itens Pedidos e Total</h2><br>
+            <div class="totalbox">
+                <ul class="itempedido">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul><br>
+                <p class="total">Total = XX,XX</p>
+            </div>    
+        </div><br>
+        <button class="botaoenviar">Concluir</button>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>    
+    <footer class="footer">
+        <p style="font-size: 12px;">Em caso de problemas contactar:</p><br>
+        <p style="font-size: 10px;">xxxx@usp.br</p>
+        <p style="font-size: 10px;">+55(11)xxxx-xxxx</p><br>
+        <p style="font-size: 10px;">PMR3304 - Grupo G</p>
+    </footer>
+</body>
+</html>
