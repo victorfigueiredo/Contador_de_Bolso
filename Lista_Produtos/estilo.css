@@ -1,0 +1,98 @@
+* {
+    margin: 0cm;
+    padding: 0cm;
+    font-family: Fixedsys Regular, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to right, rgb(170, 11, 11), rgb(37, 1, 1));
+}
+
+.header{
+    width: 100%;
+    height: 65px;
+    position: sticky;
+    z-index: 1;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6,);    
+    background: rgb(37, 37, 37);
+    color: white;
+}
+
+.header img{
+    width: 100px;
+    height: auto;
+    /*justify-self: left;*/
+}
+
+.avatar{
+    justify-self: right; 
+    object-fit: scale-down; 
+    border-radius: 100%;
+}
+
+.nameuser{
+    justify-self: right;
+    justify-content: center;
+}
+
+.logout{
+    justify-content: center;
+    align-content: center;
+}
+
+.wrap{
+    position: relative;    
+}
+
+.prodgrid{
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(4,150px);    
+}
+
+.prodgrid>button{
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.prodgrid>button:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.prodgrid>button:focus{
+    background-color: rgb(192, 192, 192);
+}
+
+.finalizar{
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background: black;
+    color: rgb(158, 158, 158);
+}
