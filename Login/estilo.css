@@ -28,7 +28,14 @@ body{
     height: auto;
 }
 
+.wrap{
+    position: relative;    
+}
+
 .section{
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    padding-left: center;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, auto);

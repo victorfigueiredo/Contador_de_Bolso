@@ -17,9 +17,10 @@ body{
     height: 65px;
     position: sticky;
     z-index: 1;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(6,);    
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     background: rgb(37, 37, 37);
     color: white;
 }
@@ -27,7 +28,7 @@ body{
 .header img{
     width: 100px;
     height: auto;
-    /*justify-self: left;*/
+    justify-self: left;
 }
 
 .avatar{
@@ -50,17 +51,16 @@ body{
     position: relative;    
 }
 
-.prodgrid{
+.editplist{
     padding-top: 3rem;
     padding-bottom: 10rem;
     justify-content: center;
     align-content: center;
     display: grid;
-    grid-template-columns: repeat(4, 150px);
-    grid-template-rows: repeat(4,150px);    
+    grid-template-rows: repeat(8,75px);    
 }
 
-.prodgrid>button{
+.editplist>button{
     justify-content: center;
     cursor: pointer;
     border: 1px solid rgb(255, 255, 255);
@@ -68,20 +68,21 @@ body{
     outline: none;
 }
 
-.prodgrid>button:hover{
+.editplist>button:hover{
     background-color: rgb(192, 192, 192);
 }
 
-.prodgrid>button:focus{
+.editplist>button:focus{
     background-color: rgb(192, 192, 192);
 }
 
-.finalizar{
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid rgb(255, 255, 255);
+.item{
     background: rgba(255, 255, 255, 0.5);
-    outline: none;
+    border: 1px solid white;
+}
+
+.item>form{
+    display: inline-block;
 }
 
 .footer{
