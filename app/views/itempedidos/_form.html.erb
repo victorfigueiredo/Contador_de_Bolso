@@ -1,0 +1,27 @@
+<%= form_with(model: itempedido) do |form| %>
+  <% if itempedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(itempedido.errors.count, "error") %> prohibited this itempedido from being saved:</h2>
+
+      <ul>
+        <% itempedido.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :produto_id %>
+    <%= form.text_field :produto_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pedido_id %>
+    <%= form.text_field :pedido_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,209 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ * {
+    margin: 0cm;
+    padding: 0cm;
+    font-family: Fixedsys Regular, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    text: #ffffff;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to right, rgb(170, 11, 11), rgb(37, 1, 1));
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    z-index: 1;
+    display: flex;
+    align-content: center;
+    background: rgb(37, 37, 37);
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header img{
+    width: 100px;
+    height: auto;
+}
+
+.section{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 50px auto 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionpesq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quadrologin{
+    display: grid;
+    width: 300px;
+    height: 350px;
+    place-items: center center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.quadrousuario{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    place-items: center center;
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-around;
+    background: #000000;
+}
+
+.quadropesq{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    flex-direction: column;
+    place-items: center center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+    justify-content: space-around;
+
+}
+
+.quadrototal{
+    display: grid;
+    width: 300px;
+    height: 150px;
+    place-items: center center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.quadrorelatorio{
+    display: grid;
+    width: 300px;
+    height: 350px;
+    place-items: center center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.titulo{
+    font-size: 25px;
+}
+
+.loginbox{
+    display: grid;
+    justify-content: center;
+}
+
+.loginbox > .form{
+    height: 20px;
+    width: 100px;
+}
+
+.pesqbox{
+    display: grid;
+    justify-content: center;
+}
+
+.botaosair{
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: rgb(146, 146, 146);
+    outline: none;
+}
+
+.botaosair:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaosair:focus{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaovoltar{
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+    border: rgb(146, 146, 146);
+    outline: none;
+}
+
+.botaovoltar:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaovoltar:focus{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaologin{
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border: rgb(146, 146, 146);
+    outline: none;
+}
+
+.botaologin:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaologin:focus{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaoenviar{
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border: rgb(146, 146, 146);
+    outline: none;
+}
+
+.botaoenviar:hover{
+    background-color: rgb(192, 192, 192);
+}
+
+.botaoenviar:focus{
+    background-color: rgb(192, 192, 192);
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background: black;
+    color: rgb(158, 158, 158);
+}

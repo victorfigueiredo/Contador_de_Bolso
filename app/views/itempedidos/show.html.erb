@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Produto:</strong>
+  <%= @itempedido.produto_id %>
+</p>
+
+<p>
+  <strong>Pedido:</strong>
+  <%= @itempedido.pedido_id %>
+</p>
+
+<%= link_to 'Edit', edit_itempedido_path(@itempedido) %> |
+<%= link_to 'Back', itempedidos_path %>
