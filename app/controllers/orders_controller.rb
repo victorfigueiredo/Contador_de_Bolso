@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
     end
 
     def ensure_pedido_isnt_empty
-      if @pedido.itempedido.empty?
+      if @pedido.itempedidos.empty?
         redirect_to root_path, notice: 'Seu pedido esta vazio'
       end
     end

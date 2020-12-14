@@ -7,7 +7,6 @@
     <tr>
       <th>Titulo</th>
       <th>Descricao</th>
-      <th>Extensao</th>
       <th>Preco</th>
       <th colspan="3"></th>
     </tr>
@@ -18,20 +17,15 @@
       <tr>
         <td><%= produto.titulo %></td>
         <td><%= produto.descricao %></td>
-        <td><%= produto.extensao %></td>
         <td><%= produto.preco %></td>
-        <td><%= link_to 'Show', produto %></td>
-        <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-        <td><%= link_to 'Destroy', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', produto %></td>
+        <td><%= button_to 'Adicionar ao pedido', itempedidos_path(produto_id: produto) %></td>
       </tr>
-      <div class="price">
-        <%= number_to_currency(produto.preco) %>
-        <%= button_to 'Adicionar ao pedido', itempedidos_path(produto_id: produto) %>
-      </div>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Produto', new_produto_path %>
+<%= link_to 'Pagina inicial', root_path, method: :get %>
+

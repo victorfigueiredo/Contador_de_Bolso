@@ -10,15 +10,11 @@
   <%= @produto.descricao %>
 </p>
 
-<p>
-  <strong>Extensao:</strong>
-  <%= @produto.extensao %>
-</p>
 
 <p>
   <strong>Preco:</strong>
   <%= @produto.preco %>
 </p>
 
-<%= link_to 'Edit', edit_produto_path(@produto) %> |
-<%= link_to 'Back', produtos_path %>
+<%= link_to 'Editar', edit_produto_path(@produto) %> |
+<%= link_to 'Voltar', produtos_path %>

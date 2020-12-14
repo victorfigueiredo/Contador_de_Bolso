@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Orders</h1>
+<h1>Pedidos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Qpessoa</th>
+      <th>Qantidade de pessoa</th>
       <th>Genero</th>
       <th>Idade</th>
       <th>Data</th>
@@ -20,9 +20,9 @@
         <td><%= order.genero %></td>
         <td><%= order.idade %></td>
         <td><%= order.data %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', order %></td>
+        <td><%= link_to 'Editar', edit_order_path(order) %></td>
+        <td><%= link_to 'Excluir', order, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,6 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %>
+
+<%= link_to 'Fazer novo pedido', produtos_path %>
+<%= link_to 'Pagina inicial', root_path, method: :get %>

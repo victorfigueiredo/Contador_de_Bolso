@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Qpessoa:</strong>
+  <strong>Qantidade de pessoa:</strong>
   <%= @order.qpessoa %>
 </p>
 
@@ -20,5 +20,8 @@
   <%= @order.data %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+
+
+<%= link_to 'Editar', edit_order_path(@order) %> |
+<%= link_to 'Voltar', orders_path %>
+<%= link_to 'Fazer novo pedido', produtos_path %>

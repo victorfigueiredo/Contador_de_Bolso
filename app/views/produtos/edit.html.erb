@@ -2,5 +2,6 @@
 
 <%= render 'form', produto: @produto %>
 
-<%= link_to 'Show', @produto %> |
-<%= link_to 'Back', produtos_path %>
+<%= link_to 'Mostrar', @produto %> |
+<td><%= link_to 'Exclir', @produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%= link_to 'Voltar', produtos_path %>

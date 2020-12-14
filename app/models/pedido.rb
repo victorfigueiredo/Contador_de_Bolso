@@ -6,7 +6,7 @@ class Pedido < ApplicationRecord
         if itematual
             itematual.quantidade += 1
         else
-            itematual = itempedidos.build(produto_id: produto_id)
+            itematual = itempedidos.build(produto_id: produto.id)
         end
         itematual
     end

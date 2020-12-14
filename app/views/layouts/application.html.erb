@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ContBolso</title>
+    <title>Contador de Bolso</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,10 +10,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class= "body">
 
     <%= render  'layouts/header'%>
-    <%= yield %>
-    <%= render  'layouts/footer'%>
+
+      <div class= "section">
+        <div class= "quadrologin">
+          <%= yield %>
+        </div>
+      </div>
+      <%= render  'layouts/footer'%>
+
+
   </body>
 </html>

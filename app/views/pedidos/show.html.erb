@@ -17,5 +17,8 @@
   </tbody>
 </table>
 
+<%= button_to 'Finalizar Pedido', new_order_path, method: :get, form_class: "w-full" %>
+<%= button_to 'Adicionar produtos ao pedido', produtos_path, method: :get %>
 <%= link_to 'Edit', edit_pedido_path(@pedido) %> |
 <%= link_to 'Back', pedidos_path %>
+<%= link_to 'Pagina inicial', root_path, method: :get %>
