@@ -1,0 +1,7 @@
+<h1>Store#index</h1>
+<div class="price">
+<%= number_to_currency(Produto.price) %>
+    <%= button_to 'Adicionar ao pedido', itempedidos_path(Produto_id: produto) %>
+</div>
+
+<p>Find me in app/views/store/index.html.erb</p>

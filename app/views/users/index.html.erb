@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+
+  <div class="wrap">
+    <section class="section">
+      <div class="quadrologin">
+          <h2 class="titulo">Login</h2><br>
+          <div class="loginbox">
+            <form>
+              <label for="name"></label>
+              <input placeholder="Usuário" type="text" id="fname" name="name"><br><br>
+              <label for="senha"></label>
+              <input placeholder="Senha" type="text" id="fname" name="senha"><br><br><br>
+              </form>
+          </div>        
+          <button class="botaologin">Login</button>
+      </div>
+  </div>
+
+
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
