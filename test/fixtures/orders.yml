@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qpessoa: 1
+  genero: MyString
+  idade: 1
+  data: 2020-12-14 11:09:23
+
+two:
+  qpessoa: 1
+  genero: MyString
+  idade: 1
+  data: 2020-12-14 11:09:23

@@ -1,9 +1,9 @@
-module pedidoatual
+module Pedidoatual
     private
     def set_pedido
-        @pedido = pedido.find(session[:pedido_id])
+        @pedido = Pedido.find(session[:pedido_id])
     rescue ActiveRecord::RecordNotFound
-        @pedido = pedido.create
-        session[:pedido_id] = @pedido.pedido_id
+        @pedido = Pedido.create
+        session[:pedido_id] = @pedido.id
     end
 end

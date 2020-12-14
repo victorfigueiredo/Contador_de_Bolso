@@ -1,19 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Pessoa:</strong>
-  <%= @pedido.pessoa %>
-</p>
-
-<p>
-  <strong>Sexo:</strong>
-  <%= @pedido.sexo %>
-</p>
-
-<p>
-  <strong>Data:</strong>
-  <%= @pedido.data %>
-</p>
+<table class="table-fixed w-full">
+  <thead>
+    <tr class="big">
+      <th class="py-2 w-1/2">Produto</th>
+      <th class="py-2 w-1/2 text-left">Preço</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pedido.itempedidos.each do |itempedido| %>
+      <tr class="big">
+        <td class="py-4 flex items-center text-sm">
+          <%= itempedido.produto.titulo %>
+        </td>
+        <td class="py-4 text-sm"><%= sprintf("R$%0.02f", itempedido.produto.preco) %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_pedido_path(@pedido) %> |
 <%= link_to 'Back', pedidos_path %>

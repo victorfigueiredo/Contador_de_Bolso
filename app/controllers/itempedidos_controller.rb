@@ -1,4 +1,5 @@
 class ItempedidosController < ApplicationController
+  include Pedidoatual
   before_action :set_itempedido, only: [:show, :edit, :update, :destroy]
 
   # GET /itempedidos
@@ -25,11 +26,11 @@ class ItempedidosController < ApplicationController
   # POST /itempedidos.json
   def create
     produto = Produto.find(params[:produto_id])
-    @itempedido = @pedido.itempedidos.build(produto: produto)
+    @itempedido = @pedido.add_produto(produto)
 
     respond_to do |format|
       if @itempedido.save
-        format.html { redirect_to @itempedido, notice: 'Itempedido was successfully created.' }
+        format.html { redirect_to @itempedido.pedido, notice: 'Itempedido was successfully created.' }
         format.json { render :show, status: :created, location: @itempedido }
       else
         format.html { render :new }

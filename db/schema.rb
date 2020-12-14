@@ -10,15 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_050517) do
+ActiveRecord::Schema.define(version: 2020_12_14_141257) do
 
   create_table "itempedidos", force: :cascade do |t|
     t.integer "produto_id", null: false
-    t.integer "pedido_id", null: false
+    t.integer "pedido_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "quantidade", default: 1
+    t.integer "order_id"
+    t.index ["order_id"], name: "index_itempedidos_on_order_id"
     t.index ["pedido_id"], name: "index_itempedidos_on_pedido_id"
     t.index ["produto_id"], name: "index_itempedidos_on_produto_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "qpessoa"
+    t.string "genero"
+    t.integer "idade"
+    t.datetime "data"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "pedidos", force: :cascade do |t|
@@ -38,6 +50,19 @@ ActiveRecord::Schema.define(version: 2020_12_13_050517) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "itempedidos", "orders"
   add_foreign_key "itempedidos", "pedidos"
   add_foreign_key "itempedidos", "produtos"
 end

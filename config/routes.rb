@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :orders
+  #devise_for :users
+  #resources :users
   resources :itempedidos
   resources :pedidos
   root to: 'loja#index'
